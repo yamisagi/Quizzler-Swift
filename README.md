@@ -64,7 +64,9 @@ In this repository, I will create basic Quiz app with Model View Controller (MVC
 
 
   - [x] Project Setup
-
+  - [x] Create Update UI
+  - [x] Create Control on Question and Answer
+  - [x] Link UI to Code
   
   
 <p align="center">(Still working on it...)</p>
