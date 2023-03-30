@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B05AE14C29D5CCE100AA7AE8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05AE14B29D5CCE100AA7AE8 /* Question.swift */; };
 		B0F4F11A29D180BA00DAE552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F4F11929D180BA00DAE552 /* AppDelegate.swift */; };
 		B0F4F11C29D180BA00DAE552 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F4F11B29D180BA00DAE552 /* SceneDelegate.swift */; };
 		B0F4F11E29D180BA00DAE552 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F4F11D29D180BA00DAE552 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		B00640AC29D4C26700461182 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B00640AD29D4C3AE00461182 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B05AE14B29D5CCE100AA7AE8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B0F4F11629D180BA00DAE552 /* Quizzler-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F4F11929D180BA00DAE552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0F4F11B29D180BA00DAE552 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				B0F4F12229D180BC00DAE552 /* Assets.xcassets */,
 				B0F4F12429D180BC00DAE552 /* LaunchScreen.storyboard */,
 				B0F4F12729D180BC00DAE552 /* Info.plist */,
+				B05AE14B29D5CCE100AA7AE8 /* Question.swift */,
 			);
 			path = "Quizzler-Swift";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F4F11E29D180BA00DAE552 /* ViewController.swift in Sources */,
+				B05AE14C29D5CCE100AA7AE8 /* Question.swift in Sources */,
 				B0F4F11A29D180BA00DAE552 /* AppDelegate.swift in Sources */,
 				B0F4F11C29D180BA00DAE552 /* SceneDelegate.swift in Sources */,
 			);

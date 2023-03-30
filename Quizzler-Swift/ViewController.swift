@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     let quiz = [
-        ["4 + 2 = 6", "True"],
-        ["5 - 3 > 1", "True"],
-        ["3 + 8 < 10 ", "False"],
+        Question(question: "4 + 2 = 6", answer: "True"),
+        Question(question: "3 + 5 > 9", answer: "False"),
+        Question(question: "3 - 1 < 3", answer: "True"),
     ]
     var questionNumber = 0
 
@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        questionLabel.text = quiz[questionNumber][0]
+        questionLabel.text = quiz[questionNumber].question
     }
 
     @IBAction func answerQuestion(_ sender: UIButton) {
         let useAnswer = sender.currentTitle // Will return True or False
-        let actualAnswer = quiz[questionNumber][1] // Will return actual answer so we can compare them
+        let actualAnswer = quiz[questionNumber].answer // Will return actual answer so we can compare them
 
         if useAnswer == actualAnswer {
             print("Right")
@@ -43,10 +43,10 @@ class ViewController: UIViewController {
         // Resetting it to 0 else if continue to ++
         if questionNumber >= quiz.capacity {
             questionNumber = 0
-            questionLabel.text = quiz[questionNumber][0]
+            questionLabel.text = quiz[questionNumber].question
 
         } else {
-            questionLabel.text = quiz[questionNumber][0]
+            questionLabel.text = quiz[questionNumber].question
         }
     }
 }
