@@ -71,6 +71,9 @@ In this repository, I will create basic Quiz app with Model View Controller (MVC
   - [x] Replace List of Questions with Struct Questions 
   - [x] Implement MVC Design Pattern
   - [x] Seperate Quiz Logic from ViewController
+  - [x] Create a Score Keeper
+  - [x] Get Score from QuizBrain
+  - [x] Project Complete
   
   
 <p align="center">(Still working on it...)</p>

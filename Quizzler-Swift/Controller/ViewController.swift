@@ -8,10 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     var quizSource = QuizSource()
-  
 
+    @IBOutlet var score: UILabel!
     @IBOutlet var falseButton: UIButton!
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var progressBar: UIProgressView!
@@ -24,17 +23,17 @@ class ViewController: UIViewController {
 
     @IBAction func answerQuestion(_ sender: UIButton) {
         let userAnswer = sender.currentTitle ?? "True" // Will return True or False
-       
-        var answer = quizSource.checkAnswer(userAnswer)
-        
-        if answer{
+
+        let answer = quizSource.checkAnswer(userAnswer)
+
+        if answer {
             sender.backgroundColor = UIColor.green
-        }else{
+        } else {
             sender.backgroundColor = UIColor.red
         }
-       
+
         quizSource.nextQuestion()
-        
+
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateQuestion), userInfo: nil, repeats: false)
     }
 
@@ -44,6 +43,7 @@ class ViewController: UIViewController {
 
         questionLabel.text = quizSource.getQuestion()
         progressBar.progress = quizSource.getProgress()
+        score.text = "Score : \(quizSource.getScore())"
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
     }

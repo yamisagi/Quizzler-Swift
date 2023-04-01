@@ -25,9 +25,20 @@ struct QuizSource {
     ]
 
     var questionNumber = 0
+    var userScore = 0
 
-    func checkAnswer(_ userAnswer: String) -> Bool {
+//    mutating func updateScore(_ userAnswer: Bool) {
+//        if userAnswer {
+//            userScore += 1
+//        }
+//    }
+    func getScore() -> Int {
+        return userScore
+    }
+
+    mutating func checkAnswer(_ userAnswer: String) -> Bool {
         if userAnswer == quiz[questionNumber].answer {
+            userScore += 1
             return true
         } else {
             return false
@@ -41,7 +52,7 @@ struct QuizSource {
     func getProgress() -> Float {
         return Float(questionNumber + 1) / Float(quiz.count)
     }
-    
+
     // Bir Struct'ı içerden veya dışardan değiştirmek arasında fark vardır.
     // Dışarıdan değiştirmeye çalıştırdığımızda bir sorun oluşmuyor fakat,
     // İçeriden değiştirmeye çalışınca otomatik olarak oluşturulan "self" kw immutable olarak oluşuyor.
@@ -51,6 +62,7 @@ struct QuizSource {
             questionNumber += 1
         } else {
             questionNumber = 0
+            userScore = 0
         }
     }
 }
